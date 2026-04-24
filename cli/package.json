@@ -1,6 +1,6 @@
 {
   "name": "@xgauravyaduvanshii/sesy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run your remote SSH Electron project in a local window — instantly.",
   "type": "module",
   "bin": {
