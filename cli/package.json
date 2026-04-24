@@ -4,7 +4,7 @@
   "description": "Run your remote SSH Electron project in a local window — instantly.",
   "type": "module",
   "bin": {
-    "sesy": "./bin/sesy.js"
+    "sesy": "bin/sesy.js"
   },
   "engines": {
     "node": ">=18"
