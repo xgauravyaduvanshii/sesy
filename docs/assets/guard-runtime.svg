@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" fill="none">
+  <rect width="1200" height="520" fill="#0A1020"/>
+  <rect x="30" y="30" width="1140" height="460" rx="26" fill="#121B31" stroke="#2D4368" stroke-width="2"/>
+  <text x="60" y="82" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="32" font-weight="700">sesy-guard runtime path</text>
+  <text x="60" y="116" fill="#9BB0D1" font-family="Arial, sans-serif" font-size="18">Make remote Electron startup survive long enough for the renderer server to boot</text>
+  <rect x="60" y="170" width="220" height="180" rx="22" fill="#13233D" stroke="#385E96" stroke-width="2"/>
+  <text x="88" y="216" fill="#9BD1FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Detect mode</text>
+  <text x="88" y="252" fill="#D7E3F7" font-family="Arial, sans-serif" font-size="18">SSH_CLIENT</text>
+  <text x="88" y="278" fill="#D7E3F7" font-family="Arial, sans-serif" font-size="18">SSH_TTY</text>
+  <text x="88" y="304" fill="#D7E3F7" font-family="Arial, sans-serif" font-size="18">DISPLAY / WAYLAND</text>
+
+  <rect x="340" y="170" width="220" height="180" rx="22" fill="#1C213A" stroke="#666EAA" stroke-width="2"/>
+  <text x="368" y="216" fill="#C7CCFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Inject flags</text>
+  <text x="368" y="252" fill="#E6E9FF" font-family="Arial, sans-serif" font-size="18">disable-gpu</text>
+  <text x="368" y="278" fill="#E6E9FF" font-family="Arial, sans-serif" font-size="18">disable-dev-shm-usage</text>
+  <text x="368" y="304" fill="#E6E9FF" font-family="Arial, sans-serif" font-size="18">no-sandbox + more</text>
+
+  <rect x="620" y="170" width="220" height="180" rx="22" fill="#102A26" stroke="#2F816E" stroke-width="2"/>
+  <text x="648" y="216" fill="#94E6C9" font-family="Arial, sans-serif" font-size="24" font-weight="700">Skip window</text>
+  <text x="648" y="252" fill="#D3F2E7" font-family="Arial, sans-serif" font-size="18">No BrowserWindow on SSH</text>
+  <text x="648" y="278" fill="#D3F2E7" font-family="Arial, sans-serif" font-size="18">No remote GUI dependency</text>
+
+  <rect x="900" y="170" width="220" height="180" rx="22" fill="#2A1F12" stroke="#A26E2C" stroke-width="2"/>
+  <text x="928" y="216" fill="#FFD59F" font-family="Arial, sans-serif" font-size="24" font-weight="700">Renderer lives</text>
+  <text x="928" y="252" fill="#FFF0D9" font-family="Arial, sans-serif" font-size="18">Vite / webpack starts</text>
+  <text x="928" y="278" fill="#FFF0D9" font-family="Arial, sans-serif" font-size="18">sesy can connect later</text>
+
+  <path d="M280 260 H340" stroke="#83B8FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M560 260 H620" stroke="#B1B7FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M840 260 H900" stroke="#86E7C7" stroke-width="4" stroke-linecap="round"/>
+</svg>

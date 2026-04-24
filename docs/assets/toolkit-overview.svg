@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" fill="none">
+  <rect width="1200" height="680" fill="#0B1220"/>
+  <rect x="40" y="40" width="1120" height="600" rx="28" fill="#101A2D" stroke="#28405F" stroke-width="2"/>
+  <text x="70" y="95" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="34" font-weight="700">sesy toolkit overview</text>
+  <text x="70" y="130" fill="#9BB0D1" font-family="Arial, sans-serif" font-size="18">Remote Electron development without remote GUI rendering</text>
+
+  <rect x="70" y="180" width="430" height="380" rx="24" fill="#13233D" stroke="#2F568C" stroke-width="2"/>
+  <text x="100" y="225" fill="#9BD1FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Remote machine</text>
+  <text x="100" y="260" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">sesy-guard</text>
+  <text x="100" y="292" fill="#C9D7EE" font-family="Arial, sans-serif" font-size="18">1. Detects SSH or headless startup</text>
+  <text x="100" y="322" fill="#C9D7EE" font-family="Arial, sans-serif" font-size="18">2. Injects Electron-safe startup flags</text>
+  <text x="100" y="352" fill="#C9D7EE" font-family="Arial, sans-serif" font-size="18">3. Skips BrowserWindow on the server</text>
+  <text x="100" y="382" fill="#C9D7EE" font-family="Arial, sans-serif" font-size="18">4. Keeps Vite or webpack dev server alive</text>
+  <rect x="100" y="420" width="300" height="90" rx="18" fill="#0D1830" stroke="#355E96" stroke-width="2"/>
+  <text x="125" y="458" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Renderer server</text>
+  <text x="125" y="488" fill="#9BB0D1" font-family="Arial, sans-serif" font-size="18">http://localhost:8000</text>
+
+  <rect x="540" y="270" width="120" height="120" rx="60" fill="#173154" stroke="#4D89D5" stroke-width="2"/>
+  <text x="563" y="335" fill="#EAF3FF" font-family="Arial, sans-serif" font-size="20" font-weight="700">SSH</text>
+  <text x="552" y="360" fill="#9BB0D1" font-family="Arial, sans-serif" font-size="16">forward</text>
+
+  <rect x="700" y="180" width="430" height="380" rx="24" fill="#112A26" stroke="#2C7A62" stroke-width="2"/>
+  <text x="730" y="225" fill="#8FE6C8" font-family="Arial, sans-serif" font-size="28" font-weight="700">Local machine</text>
+  <text x="730" y="260" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">sesy CLI</text>
+  <text x="730" y="292" fill="#D1EEE6" font-family="Arial, sans-serif" font-size="18">1. Watches forwarded localhost port</text>
+  <text x="730" y="322" fill="#D1EEE6" font-family="Arial, sans-serif" font-size="18">2. Detects the first live HTTP response</text>
+  <text x="730" y="352" fill="#D1EEE6" font-family="Arial, sans-serif" font-size="18">3. Launches a real local Electron window</text>
+  <text x="730" y="382" fill="#D1EEE6" font-family="Arial, sans-serif" font-size="18">4. Gives desktop behavior back to the developer</text>
+  <rect x="730" y="420" width="320" height="90" rx="18" fill="#0C1F1C" stroke="#3A8E77" stroke-width="2"/>
+  <text x="755" y="458" fill="#F3F7FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Local Electron window</text>
+  <text x="755" y="488" fill="#A7DCCE" font-family="Arial, sans-serif" font-size="18">BrowserWindow.loadURL(...)</text>
+
+  <path d="M420 465 C500 465 505 330 540 330" stroke="#76AFFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M660 330 C700 330 705 465 730 465" stroke="#6BE0B6" stroke-width="4" stroke-linecap="round"/>
+  <text x="470" y="448" fill="#AACBFF" font-family="Arial, sans-serif" font-size="16">renderer port stays alive</text>
+  <text x="680" y="448" fill="#9BE8CE" font-family="Arial, sans-serif" font-size="16">sesy opens the app locally</text>
+</svg>

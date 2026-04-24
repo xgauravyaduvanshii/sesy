@@ -1,0 +1,8 @@
+node_modules
+dist
+.sesy-cache
+*.log
+coverage
+.DS_Store
+.idea
+.vscode

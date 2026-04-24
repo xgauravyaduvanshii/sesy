@@ -1,0 +1,58 @@
+{
+  "name": "sesy",
+  "version": "0.1.0",
+  "description": "Run your remote SSH Electron project in a local window — instantly.",
+  "type": "module",
+  "bin": {
+    "sesy": "./bin/sesy.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "docs/",
+    "README.md"
+  ],
+  "keywords": [
+    "electron",
+    "ssh",
+    "remote-dev",
+    "cli",
+    "developer-tools",
+    "desktop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgauravyaduvanshii/sesy.git"
+  },
+  "homepage": "https://github.com/xgauravyaduvanshii/sesy/tree/main/cli#readme",
+  "bugs": {
+    "url": "https://github.com/xgauravyaduvanshii/sesy/issues"
+  },
+  "author": {
+    "name": "xgauravyaduvanshii",
+    "email": "xgauravyaduvanshii@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "electron": "^30.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "scripts": {
+    "start": "node bin/sesy.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "postinstall": "node -e \"console.log('\\n✔ sesy installed! Run: sesy doctor\\n')\""
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ]
+  }
+}

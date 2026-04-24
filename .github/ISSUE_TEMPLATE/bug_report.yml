@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a problem with sesy-guard
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please include enough detail for us to reproduce the issue.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version, Electron version
+      placeholder: Ubuntu 24.04, Node 20.x, Electron 30.x
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Where does this happen?
+      options:
+        - SSH / headless environment
+        - Local machine
+        - CI
+        - Multiple environments
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Start the Electron app with ...
+        2. Set SESY_MODE=...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste terminal output, especially from SESY_DEBUG=1 runs
+      render: shell

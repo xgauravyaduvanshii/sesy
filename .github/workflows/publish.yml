@@ -1,0 +1,101 @@
+name: Publish Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Package to publish
+        required: true
+        type: choice
+        options:
+          - sesy-guard
+          - sesy
+          - both
+      tag:
+        description: Optional dist-tag, for example latest or beta
+        required: false
+        default: latest
+        type: string
+  push:
+    tags:
+      - "sesy-guard-v*"
+      - "sesy-v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish-guard:
+    if: |
+      github.event_name == 'workflow_dispatch' && (inputs.target == 'sesy-guard' || inputs.target == 'both') ||
+      startsWith(github.ref, 'refs/tags/sesy-guard-v')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Pack preview
+        run: npm pack
+
+      - name: Publish sesy-guard
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            npm publish --access public --tag "${{ inputs.tag }}"
+          else
+            npm publish --access public
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-cli:
+    if: |
+      github.event_name == 'workflow_dispatch' && (inputs.target == 'sesy' || inputs.target == 'both') ||
+      startsWith(github.ref, 'refs/tags/sesy-v')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          cache: npm
+          cache-dependency-path: cli/package-lock.json
+
+      - name: Install CLI dependencies
+        working-directory: cli
+        run: npm install
+
+      - name: Run CLI tests
+        working-directory: cli
+        run: npm test
+
+      - name: Pack preview
+        working-directory: cli
+        run: npm pack
+
+      - name: Publish sesy
+        working-directory: cli
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            npm publish --access public --tag "${{ inputs.tag }}"
+          else
+            npm publish --access public
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

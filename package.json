@@ -1,0 +1,67 @@
+{
+  "name": "sesy-guard",
+  "version": "0.1.0",
+  "description": "Prevent Electron from crashing in SSH/headless environments. Part of the sesy toolkit.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "require": "./src/index.cjs"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "electron": ">=20"
+  },
+  "peerDependenciesMeta": {
+    "electron": {
+      "optional": false
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "electron": "^30.0.0"
+  },
+  "keywords": [
+    "electron",
+    "ssh",
+    "headless",
+    "sesy",
+    "no-display",
+    "guard",
+    "remote-dev"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgauravyaduvanshii/sesy.git"
+  },
+  "homepage": "https://github.com/xgauravyaduvanshii/sesy#readme",
+  "bugs": {
+    "url": "https://github.com/xgauravyaduvanshii/sesy/issues"
+  },
+  "author": {
+    "name": "xgauravyaduvanshii",
+    "email": "xgauravyaduvanshii@gmail.com"
+  },
+  "license": "MIT",
+  "files": [
+    "src/",
+    "docs/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ]
+  }
+}
