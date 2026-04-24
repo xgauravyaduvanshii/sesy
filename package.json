@@ -1,5 +1,5 @@
 {
-  "name": "sesy-guard",
+  "name": "@xgauravyaduvanshii/sesy-guard",
   "version": "0.1.0",
   "description": "Prevent Electron from crashing in SSH/headless environments. Part of the sesy toolkit.",
   "type": "module",
