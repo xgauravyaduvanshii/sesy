@@ -1,13 +1,13 @@
 # Electron Builder
 
-`sesy-guard` should stay a development-only dependency. It protects remote SSH development, not packaged production builds.
+`@xgauravyaduvanshii/sesy-guard` should stay a development-only dependency. It protects remote SSH development, not packaged production builds.
 
 ## Keep it as a devDependency
 
 Install it like this:
 
 ```bash
-npm install --save-dev sesy-guard
+npm i @xgauravyaduvanshii/sesy-guard
 ```
 
 ## Exclude it from production packaging
@@ -18,7 +18,7 @@ In `electron-builder`, make sure your packaged app does not need the guard:
 {
   "build": {
     "files": [
-      "!node_modules/sesy-guard/**"
+      "!node_modules/@xgauravyaduvanshii/sesy-guard/**"
     ]
   }
 }
@@ -30,7 +30,7 @@ Use a development-only import so production builds work even when the package is
 
 ```js
 if (process.env.NODE_ENV === 'development') {
-  const { initSesyGuard, isSshMode } = await import('sesy-guard');
+  const { initSesyGuard, isSshMode } = await import('@xgauravyaduvanshii/sesy-guard');
   initSesyGuard();
 }
 ```

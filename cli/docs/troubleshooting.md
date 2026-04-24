@@ -21,7 +21,7 @@ The local Electron dependency was not installed correctly or the binary path no 
 
 ### Fix steps
 
-1. Reinstall the package with `npm install -g sesy`.
+1. Reinstall the package with `npm i @xgauravyaduvanshii/sesy`.
 2. Run `sesy doctor` to confirm the binary path is valid.
 3. If you are developing locally, run `npm install` inside the repo first.
 

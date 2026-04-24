@@ -1,7 +1,7 @@
 # sesy
 
-[![npm version](https://img.shields.io/npm/v/sesy)](https://www.npmjs.com/package/sesy)
-[![license](https://img.shields.io/npm/l/sesy)](../LICENSE)
+[![npm version](https://img.shields.io/npm/v/%40xgauravyaduvanshii%2Fsesy)](https://www.npmjs.com/package/@xgauravyaduvanshii/sesy)
+[![license](https://img.shields.io/npm/l/%40xgauravyaduvanshii%2Fsesy)](../LICENSE)
 [![node >= 18](https://img.shields.io/badge/node-%3E%3D18-339933)](https://nodejs.org/)
 [![Repository](https://img.shields.io/badge/github-xgauravyaduvanshii%2Fsesy-181717?logo=github)](https://github.com/xgauravyaduvanshii/sesy)
 
@@ -36,7 +36,7 @@ flowchart LR
 ### 1. Install
 
 ```bash
-npm install -g sesy
+npm i @xgauravyaduvanshii/sesy
 ```
 
 ### 2. Initialize a project
@@ -151,9 +151,9 @@ Example:
 
 ## Where sesy fits with sesy-guard
 
-`sesy` works best with `sesy-guard`:
+`sesy` works best with `@xgauravyaduvanshii/sesy-guard`:
 
-- `sesy-guard` keeps the remote Electron main process alive in SSH
+- `@xgauravyaduvanshii/sesy-guard` keeps the remote Electron main process alive in SSH
 - `sesy` uses the resulting forwarded port to open the native app locally
 
 ```mermaid

@@ -1,12 +1,12 @@
 # Vite + Electron
 
-For `electron-vite` and `vite-plugin-electron`, integrate `sesy-guard` in the Electron main entry, not in Vite config files.
+For `electron-vite` and `vite-plugin-electron`, integrate `@xgauravyaduvanshii/sesy-guard` in the Electron main entry, not in Vite config files.
 
 ## Correct placement
 
 ```ts
 import { app } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 initSesyGuard();
 

@@ -30,7 +30,7 @@ Call it at the very top of your Electron `main.js` or `main.ts`, before `app.whe
 ### Example
 
 ```js
-import { initSesyGuard } from 'sesy-guard';
+import { initSesyGuard } from '@xgauravyaduvanshii/sesy-guard';
 
 const mode = initSesyGuard();
 ```

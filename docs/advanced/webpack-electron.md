@@ -1,6 +1,6 @@
 # Webpack + Electron
 
-If your Electron project uses webpack for either the main process or renderer, `sesy-guard` still belongs in the Electron main entry file, not in webpack configuration.
+If your Electron project uses webpack for either the main process or renderer, `@xgauravyaduvanshii/sesy-guard` still belongs in the Electron main entry file, not in webpack configuration.
 
 ## Where to initialize it
 
@@ -8,7 +8,7 @@ Put the guard at the very top of your main-process source:
 
 ```js
 import { app } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 initSesyGuard();
 

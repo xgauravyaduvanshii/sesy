@@ -347,7 +347,7 @@ Tests:
 
 Must cover:
 - What problem this solves (the SSH Electron crash in plain English)
-- `npm install --save-dev sesy-guard`
+- `npm i @xgauravyaduvanshii/sesy-guard`
 - The 3-line integration into `main.js`
 - How to verify it's working (run `SESY_DEBUG=1 npm run dev` on SSH)
 - Link to `sesy` CLI (the companion tool that opens the window locally)
@@ -401,7 +401,7 @@ app.whenReady().then(() => { createWindow(); });
 
 // AFTER
 import { app, BrowserWindow } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 const mode = initSesyGuard();
 app.whenReady().then(() => {
   if (!isSshMode()) createWindow();

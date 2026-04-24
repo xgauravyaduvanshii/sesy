@@ -13,7 +13,7 @@ If you use VS Code Remote SSH, port forwarding is usually already available. If 
 ## Install
 
 ```bash
-npm install -g sesy
+npm i @xgauravyaduvanshii/sesy
 ```
 
 ## Run your first project in 5 minutes

@@ -54,7 +54,7 @@ export const Errors = {
    */
   electronNotFound: () => new SesyError(
     'Electron binary not found.',
-    'Try reinstalling sesy: npm install -g sesy',
+    'Try reinstalling sesy: npm i @xgauravyaduvanshii/sesy',
   ),
 
   /**

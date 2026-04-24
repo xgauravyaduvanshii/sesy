@@ -8,8 +8,8 @@ Remote Electron development usually breaks in two places: the remote Electron ma
 
 ## What lives here
 
-- `sesy-guard`: the package installed inside the remote Electron project to keep Electron alive in SSH and headless environments
-- `sesy`: the CLI in [`cli/`](./cli) that watches the forwarded port on your local machine and opens a real Electron window locally
+- `@xgauravyaduvanshii/sesy-guard`: the package installed inside the remote Electron project to keep Electron alive in SSH and headless environments
+- `@xgauravyaduvanshii/sesy`: the CLI in [`cli/`](./cli) that watches the forwarded port on your local machine and opens a real Electron window locally
 
 Repository: `https://github.com/xgauravyaduvanshii/sesy.git`  
 Author: `xgauravyaduvanshii <xgauravyaduvanshii@gmail.com>`
@@ -45,9 +45,9 @@ flowchart LR
     E --> F[Local Electron BrowserWindow]
 ```
 
-## Package 1: `sesy-guard`
+## Package 1: `@xgauravyaduvanshii/sesy-guard`
 
-`sesy-guard` is the remote-side safety layer. It prevents Electron from crashing when there is no X11, Wayland, or usable display stack.
+`@xgauravyaduvanshii/sesy-guard` is the remote-side safety layer. It prevents Electron from crashing when there is no X11, Wayland, or usable display stack.
 
 ![sesy-guard runtime](./docs/assets/guard-runtime.svg)
 
@@ -62,7 +62,7 @@ flowchart LR
 
 ```js
 import { app } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 const mode = initSesyGuard();
 
@@ -73,7 +73,7 @@ app.whenReady().then(() => {
 });
 ```
 
-### `sesy-guard` structure
+### `@xgauravyaduvanshii/sesy-guard` structure
 
 ```text
 src/
@@ -86,7 +86,7 @@ src/
 └── logger.js         # zero-dependency logger
 ```
 
-### `sesy-guard` key docs
+### `@xgauravyaduvanshii/sesy-guard` key docs
 
 - [Getting started](./docs/getting-started.md)
 - [How it works](./docs/how-it-works.md)
@@ -94,7 +94,7 @@ src/
 - [Integration guide](./docs/integration-guide.md)
 - [Troubleshooting](./docs/troubleshooting.md)
 
-## Package 2: `sesy` CLI
+## Package 2: `@xgauravyaduvanshii/sesy` CLI
 
 The CLI is the local-side experience. It watches the forwarded localhost port and restores the missing native window on your own machine.
 
@@ -150,17 +150,17 @@ cli/
 
 | Situation | Package |
 |---|---|
-| Remote Electron crashes immediately on SSH | `sesy-guard` |
-| Renderer is alive but you need a local native window | `sesy` CLI |
+| Remote Electron crashes immediately on SSH | `@xgauravyaduvanshii/sesy-guard` |
+| Renderer is alive but you need a local native window | `@xgauravyaduvanshii/sesy` CLI |
 | Full remote Electron development workflow | both together |
 
 ## End-to-end workflow
 
-1. Install `sesy-guard` in the remote Electron project.
+1. Install `@xgauravyaduvanshii/sesy-guard` in the remote Electron project.
 2. Add the guard initialization at the top of the Electron main process.
 3. Start the remote dev server over SSH.
 4. Forward the renderer port to your local machine.
-5. Install and run the `sesy` CLI locally.
+5. Install and run the `@xgauravyaduvanshii/sesy` CLI locally.
 6. Let `sesy` open the Electron window on your own machine.
 
 ## Development and verification

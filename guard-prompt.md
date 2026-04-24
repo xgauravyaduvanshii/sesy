@@ -73,7 +73,7 @@ With sesy-guard: Electron survives in SSH → dev server runs → sesy CLI conne
 ### Package identity
 
 - **Name**: `sesy-guard`
-- **Install**: `npm install --save-dev sesy-guard`
+- **Install**: `npm i @xgauravyaduvanshii/sesy-guard`
 - **Peer dependency**: `electron >= 20`
 - **Runtime dependencies**: zero — pure Node.js built-ins only
 - **Node.js minimum**: 18
@@ -413,7 +413,7 @@ const mockApp = {
 #### docs/getting-started.md
 Cover:
 - The problem in plain English (Electron crash in SSH)
-- `npm install --save-dev sesy-guard`
+- `npm i @xgauravyaduvanshii/sesy-guard`
 - The 3-line change to `main.js`
 - How to verify: `SESY_DEBUG=1 npm run dev` on SSH — look for "SSH mode detected"
 - The next step: use `sesy` CLI on local machine to open the window
@@ -456,7 +456,7 @@ Show electron-builder `files` config to exclude it.
 Show a safe conditional import for production safety:
 ```js
 if (process.env.NODE_ENV === 'development') {
-  const { initSesyGuard, isSshMode } = await import('sesy-guard');
+  const { initSesyGuard, isSshMode } = await import('@xgauravyaduvanshii/sesy-guard');
   initSesyGuard();
 }
 ```
@@ -466,7 +466,7 @@ if (process.env.NODE_ENV === 'development') {
 2. Subtitle: "Stop Electron from crashing in SSH. Keep your dev server alive."
 3. The problem (3 lines)
 4. The fix (3 lines)  
-5. Install: `npm install --save-dev sesy-guard`
+5. Install: `npm i @xgauravyaduvanshii/sesy-guard`
 6. Quick integration (5 lines of code with comments)
 7. API table
 8. Env vars table

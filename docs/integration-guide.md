@@ -16,7 +16,7 @@ app.whenReady().then(() => {
 
 ```js
 import { app, BrowserWindow } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 const mode = initSesyGuard();
 
@@ -33,7 +33,7 @@ For `electron-vite` or `vite-plugin-electron`, put `initSesyGuard()` in `electro
 
 ```ts
 import { app } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 const mode = initSesyGuard();
 
@@ -52,7 +52,7 @@ In Forge projects, add guard initialization at the top of the Forge main entry:
 
 ```js
 import { app } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard';
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 initSesyGuard();
 
@@ -68,7 +68,7 @@ app.whenReady().then(() => {
 `initSesyGuard()` returns a typed mode string:
 
 ```ts
-import { initSesyGuard } from 'sesy-guard';
+import { initSesyGuard } from '@xgauravyaduvanshii/sesy-guard';
 
 const mode: 'ssh' | 'local' = initSesyGuard();
 ```

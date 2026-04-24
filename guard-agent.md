@@ -32,7 +32,7 @@ This kills the dev server too — meaning the Vite/webpack renderer never gets a
 ## Package identity
 
 - **Package name**: `sesy-guard`
-- **Install in project**: `npm install --save-dev sesy-guard`
+- **Install in project**: `npm i @xgauravyaduvanshii/sesy-guard`
 - **Usage**: Called once in the Electron `main.js` / `main.ts` — wraps the app startup
 - **Works with**: Any Electron project regardless of renderer framework (Vite, Webpack, CRA, vanilla)
 - **Zero config**: Works out of the box. Optional `.sesy.json` for port override.
@@ -118,7 +118,7 @@ These flags tell Electron not to initialize the GPU, display, or window system �
 
 ```js
 // Main export — call this at the top of main.js
-import { initSesyGuard } from 'sesy-guard';
+import { initSesyGuard } from '@xgauravyaduvanshii/sesy-guard';
 
 const sesyMode = initSesyGuard();
 // Returns: 'ssh' | 'local'
@@ -126,10 +126,10 @@ const sesyMode = initSesyGuard();
 // In 'local' mode: no-op, app runs normally
 
 // Helper to check mode without initializing
-import { isSshMode } from 'sesy-guard';
+import { isSshMode } from '@xgauravyaduvanshii/sesy-guard';
 
 // Wrapper for app.whenReady — skips BrowserWindow in SSH mode
-import { whenReady } from 'sesy-guard';
+import { whenReady } from '@xgauravyaduvanshii/sesy-guard';
 ```
 
 ---
@@ -140,7 +140,7 @@ The developer only needs to add 3 lines to their existing `main.js`:
 
 ```js
 import { app, BrowserWindow } from 'electron';
-import { initSesyGuard, isSshMode } from 'sesy-guard'; // ADD
+import { initSesyGuard, isSshMode } from '@xgauravyaduvanshii/sesy-guard'; // ADD
 
 const mode = initSesyGuard(); // ADD — call before anything else
 

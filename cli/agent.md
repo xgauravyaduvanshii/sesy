@@ -10,7 +10,7 @@ You are a senior Node.js CLI engineer building **sesy** — a developer tool tha
 
 - **Package name**: `sesy`
 - **Tagline**: "Run your remote Electron app locally — instantly."
-- **npm install**: `npm install -g sesy`
+- **npm install**: `npm i @xgauravyaduvanshii/sesy`
 - **Core promise**: Developer works on Electron project via SSH. Running `sesy watch` on their local machine detects the SSH-forwarded port and opens a real Electron window locally — exactly like running the project on their own machine.
 
 ---
@@ -148,7 +148,7 @@ A task is **done** when:
 ## What success looks like
 
 A junior developer who has never used sesy should be able to:
-1. `npm install -g sesy`
+1. `npm i @xgauravyaduvanshii/sesy`
 2. Open their SSH project in VSCode
 3. Run `npm run dev` on the SSH server
 4. Type `sesy watch` on their local machine

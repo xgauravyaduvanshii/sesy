@@ -455,7 +455,7 @@ File: `docs/getting-started.md`
 
 Must cover:
 - Prerequisites (Node.js >= 18, SSH port forwarding set up)
-- `npm install -g sesy`
+- `npm i @xgauravyaduvanshii/sesy`
 - Running first project in 5 minutes (step by step with code blocks)
 - Verifying it works
 

@@ -32,7 +32,7 @@ This is identical to the web dev experience — but for Electron. The developer 
 ### Project name and package
 
 - Package name: `sesy`
-- npm install: `npm install -g sesy`
+- npm install: `npm i @xgauravyaduvanshii/sesy`
 - Node.js minimum: 18
 - Main commands: `sesy watch`, `sesy init`, `sesy status`, `sesy doctor`
 
@@ -211,7 +211,7 @@ export const Errors = {
   ),
   electronNotFound: () => new SesyError(
     `Electron binary not found.`,
-    `Try reinstalling sesy: npm install -g sesy`
+    `Try reinstalling sesy: npm i @xgauravyaduvanshii/sesy`
   ),
   portTimeout: (port, timeoutMs) => new SesyError(
     `Timed out waiting for localhost:${port} after ${timeoutMs / 1000}s.`,
@@ -355,7 +355,7 @@ Run these checks in order. Print result for each. Exit 1 if any fail.
 | Check | Pass condition | Hint on fail |
 |---|---|---|
 | Node.js >= 18 | `process.version` semver check | Upgrade Node.js from nodejs.org |
-| sesy installed | `which sesy` returns a path | `npm install -g sesy` |
+| sesy installed | `which sesy` returns a path | `npm i @xgauravyaduvanshii/sesy` |
 | Electron binary | `electron` package path exists on disk | Reinstall sesy |
 | `.sesy.json` present | file exists in cwd | Run `sesy init` |
 | `.sesy.json` valid | passes `validateConfig()` | Edit the config file |
@@ -369,7 +369,7 @@ Run these checks in order. Print result for each. Exit 1 if any fail.
 Must include:
 - What sesy does (1 paragraph)
 - Prerequisites: Node 18+, SSH port forwarding active (explain this means VSCode Remote SSH works, or manual `-L` flag)
-- Install: `npm install -g sesy`
+- Install: `npm i @xgauravyaduvanshii/sesy`
 - Step 1: In your SSH project directory, run `sesy init`
 - Step 2: Start your Electron dev server on the SSH machine (`npm run dev`)
 - Step 3: On your local machine, run `sesy watch`

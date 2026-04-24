@@ -66,7 +66,7 @@ export async function runDoctorCommand() {
     hasFailures ||= !nodeOk;
 
     const binaryPath = findSesyBinary();
-    printCheck(Boolean(binaryPath), 'sesy installed', binaryPath ?? 'not found', "Run 'npm install -g sesy'.");
+    printCheck(Boolean(binaryPath), 'sesy installed', binaryPath ?? 'not found', "Run 'npm i @xgauravyaduvanshii/sesy'.");
     hasFailures ||= !binaryPath;
 
     let electronOk = false;

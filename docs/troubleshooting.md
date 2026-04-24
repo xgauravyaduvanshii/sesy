@@ -28,6 +28,6 @@ SESY_MODE=local npm run dev
 
 The main process survived, but the renderer likely crashed or never served usable HTML. Check the SSH terminal output for renderer build errors.
 
-## TypeScript: cannot find module `sesy-guard`
+## TypeScript: cannot find module `@xgauravyaduvanshii/sesy-guard`
 
 Make sure your TypeScript config uses modern Node-style resolution such as `moduleResolution: "node16"` or `moduleResolution: "bundler"` so the package `exports` field is respected.
